@@ -10,18 +10,25 @@ public class LargestAnagram {
 
 	@SuppressWarnings("static-access")
 	public LargestAnagram(String number) {
+		try{
+			largest = Integer.parseInt(number);
+			if(largest<0){
+				throw new NumberFormatException();
+			}
+		}catch(NumberFormatException e){
+			throw new NumberFormatException();
+		}
 		this.number = number;
-		largest = Integer.parseInt(number);
 	}
 
 	public void toCharArray() {
 		charArray = number.toCharArray();
 	}
 
-	public void printAnagrams(char[] charArray, int start) {
+	public int printAnagrams(char[] charArray, int start) {
 		if (start == charArray.length - 1) {
 			int num = Integer.parseInt(new String(charArray));
-			System.out.print(num);
+//			System.out.print(num);
 			System.out.print("\n");
 			if(num>largest){
 				largest = num;
@@ -39,6 +46,7 @@ public class LargestAnagram {
 				charArray[i] = temp;
 			}
 		}
+		return largest;
 	}
 
 	public static void main(String[] args) throws NumberFormatException,
@@ -49,7 +57,7 @@ public class LargestAnagram {
 		LargestAnagram anagram = new LargestAnagram(reader.readLine());
 		System.out.println();
 		anagram.toCharArray();
-		anagram.printAnagrams(charArray, 0);
-		System.out.println("The largest anagram of the number is: " + largest);
+		int l = anagram.printAnagrams(charArray, 0);
+		System.out.println("The largest anagram of the number is: " + l);
 	}
 }
