@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="BinaryToDecimalTest" project="Javolin" tests="3" started="3" failures="0" errors="0" ignored="0">
+  <testsuite name="com.junittest.BinaryToDecimalTest" time="0.0">
+    <testcase name="nonBinaryNumberTest" classname="com.junittest.BinaryToDecimalTest" time="0.0"/>
+    <testcase name="positiveTest" classname="com.junittest.BinaryToDecimalTest" time="0.0"/>
+    <testcase name="zeroNumberTest" classname="com.junittest.BinaryToDecimalTest" time="0.0"/>
+  </testsuite>
+</testrun>
