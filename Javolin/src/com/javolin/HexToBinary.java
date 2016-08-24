@@ -10,7 +10,7 @@ public class HexToBinary {
 		this.number = number;
 	}
 
-	public void toDecimal() {
+	public int toBinaryNum() {
 		int lengthOfNumber = number.length();
 		int temp = lengthOfNumber - 1;
 		int decimalNum = 0;
@@ -70,15 +70,17 @@ public class HexToBinary {
 			decimalNum = (int) (decimalNum + digit * Math.pow(16, (temp)));
 			temp--;
 		}
-		System.out.println("The decimal number is: " + decimalNum);
+//		System.out.println("The decimal number is: " + decimalNum);
 		if (decimalNum > 7) {
 			int octalNum = toOctalNum(decimalNum);
-			System.out.println("The octal number is: " + octalNum);
+//			System.out.println("The octal number is: " + octalNum);
 		}else{
-			System.out.println("The octal number is: " + decimalNum);
+			int decimalNumber = decimalNum;
+//			System.out.println("The octal number is: " + decimalNum);
 		}
 		int binaryNumber = toBinaryNum(decimalNum);
-		System.out.println("The Binary number is: " + binaryNumber);
+//		System.out.println("The Binary number is: " + binaryNumber);
+		return binaryNumber;
 
 	}
 
@@ -117,7 +119,7 @@ public class HexToBinary {
 				System.in));
 		System.out.println("Enter the hexadecimal number");
 		HexToBinary hexToBinary = new HexToBinary(reader.readLine());
-		hexToBinary.toDecimal();
+		hexToBinary.toBinaryNum();
 
 	}
 }

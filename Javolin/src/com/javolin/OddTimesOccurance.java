@@ -11,13 +11,13 @@ public class OddTimesOccurance {
 		list = new int[number];
 	}
 
-	public void findOddOccurrance() {
+	public int findOddOccurrance() {
 		int x = list[0];
 		// xor with all the number give number which has odd occurance
 		for (int i = 1; i < list.length; i++) {
 			x = x ^ list[i];
 		}
-		System.out.print("The odd occuring number in the list: " + x);
+		return x;
 	}
 
 	public static void main(String args[]) {
@@ -29,6 +29,7 @@ public class OddTimesOccurance {
 		for (int i = 0; i < number; i++) {
 			list[i] = scan.nextInt();
 		}
-		oddObjList.findOddOccurrance();
+		int oddNum = oddObjList.findOddOccurrance();
+		System.out.print("The odd occuring number in the list: " + oddNum);
 	}
 }
