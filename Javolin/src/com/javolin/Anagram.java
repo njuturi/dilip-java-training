@@ -3,13 +3,19 @@ package com.javolin;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Anagram {
 	private static String number;
 	private static char[] charArray;
-
+	static List<Integer> list = new ArrayList<Integer>();
+	
 	@SuppressWarnings("static-access")
 	public Anagram(String number) {
+		if(Integer.parseInt(number) <= 0){
+			throw new IllegalArgumentException();
+		}
 		this.number = number;
 	}
 
@@ -17,9 +23,10 @@ public class Anagram {
 		charArray = number.toCharArray();
 	}
 
-	public void printAnagrams(char[] charArray, int start) {
+	public List<Integer> printAnagrams(char[] charArray, int start) {
 		if (start == charArray.length - 1) {
 			int num = Integer.parseInt(new String(charArray));
+			list.add(num);
 			System.out.print(num);
 			System.out.print("\n");
 		} else {
@@ -38,6 +45,7 @@ public class Anagram {
 				charArray[i] = temp;
 			}
 		}
+		return list;
 	}
 
 	public static void main(String[] args) throws NumberFormatException,

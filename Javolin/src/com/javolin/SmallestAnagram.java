@@ -12,6 +12,14 @@ public class SmallestAnagram {
 
 	@SuppressWarnings("static-access")
 	public SmallestAnagram(String number) {
+		try{
+			smallest = Integer.parseInt(number);
+			if(smallest<0){
+				throw new NumberFormatException();
+			}
+		}catch(NumberFormatException e){
+			throw new NumberFormatException();
+		}
 		this.number = number;
 		smallest = Integer.parseInt(number);
 	}
@@ -20,10 +28,10 @@ public class SmallestAnagram {
 		charArray = number.toCharArray();
 	}
 
-	public void printAnagrams(char[] charArray, int start) {
+	public int printAnagrams(char[] charArray, int start) {
 		if (start == charArray.length - 1) {
 			int num = Integer.parseInt(new String(charArray));
-			System.out.print(num);
+//			System.out.print(num);
 			System.out.print("\n");
 			if (num < smallest) {
 				smallest = num;
@@ -41,6 +49,7 @@ public class SmallestAnagram {
 				charArray[i] = temp;
 			}
 		}
+		return smallest;
 	}
 
 	public static void main(String[] args) throws NumberFormatException,

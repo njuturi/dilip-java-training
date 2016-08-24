@@ -9,6 +9,9 @@ public class SumFirstNPowerOf2 {
 	private int number;
 
 	public SumFirstNPowerOf2(int number) {
+		if(number<=0){
+			throw new NumberFormatException();
+		}
 		this.number = number;
 	}
 

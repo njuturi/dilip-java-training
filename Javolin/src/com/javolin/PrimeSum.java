@@ -9,6 +9,9 @@ public class PrimeSum {
 	private long number;
 
 	public PrimeSum(long number) {
+		if (number <= 0) {
+			throw new IllegalArgumentException();
+		}
 		this.number = number;
 	}
 
@@ -17,7 +20,7 @@ public class PrimeSum {
 		boolean prime = false;
 		System.out.print("\nThe prime numbers are : ");
 		if (number > 1) {
-			System.out.print(2 + " "); // printing first prime number
+			// System.out.print(2 + " "); // printing first prime number
 			sum = 2;
 		}
 		for (int i = 2; i <= number; i++) {
@@ -29,7 +32,7 @@ public class PrimeSum {
 				prime = true;
 			}
 			if (prime) {
-				System.out.print(i + " "); // printing the prime numbers
+				// System.out.print(i + " "); // printing the prime numbers
 				sum = sum + i; // adding the prime numbers
 			}
 		}

@@ -9,6 +9,9 @@ public class SumOfCubesOfNaturalNumbers {
 	private int number;
 
 	public SumOfCubesOfNaturalNumbers(int number) {
+		if(number<=0){
+			throw new NumberFormatException();
+		}
 		this.number = number;
 	}
 

@@ -9,6 +9,9 @@ public class SumOfSquaresOfNaturalNumbers {
 	private int number;
 
 	public SumOfSquaresOfNaturalNumbers(int number) {
+		if(number<=0){
+			throw new NumberFormatException();
+		}
 		this.number = number;
 	}
 

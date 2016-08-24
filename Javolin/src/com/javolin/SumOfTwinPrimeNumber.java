@@ -9,16 +9,19 @@ public class SumOfTwinPrimeNumber {
 	private long number;
 
 	public SumOfTwinPrimeNumber(long number) {
+		if(number<=3){
+			throw new IllegalArgumentException();
+		}
 		this.number = number;
 	}
 
-	public void printSumOfTwinPrimeNumber() {
+	public long printSumOfTwinPrimeNumber() {
 		long temp1 = 0;
 		long temp2 = 0;
 		long sum = 0;
-		System.out.println("The twin prime numbers are: ");
+//		System.out.println("The twin prime numbers are: ");
 		if (number > 5) {
-			System.out.print("{(" + 3 + ", " + 5 + ")"); // First twin pair
+//			System.out.print("{(" + 3 + ", " + 5 + ")"); // First twin pair
 															// number
 			sum = sum + 3 + 5;
 		}
@@ -29,11 +32,12 @@ public class SumOfTwinPrimeNumber {
 			if (temp1 > number) {
 				break;
 			}
-			System.out.print(", (" + temp1 + ", " + temp2 + ")");
+//			System.out.print(", (" + temp1 + ", " + temp2 + ")");
 			sum = sum + temp1 + temp2;
 		}
-		System.out.println("}");
-		System.out.println("The sum of twin prime numbers is : " + sum);
+//		System.out.println("}");
+//		System.out.println("The sum of twin prime numbers is : " + sum);
+		return sum;
 	}
 
 	public static void main(String[] args) throws NumberFormatException,
@@ -43,6 +47,7 @@ public class SumOfTwinPrimeNumber {
 		System.out.print("Enter the number: ");
 		SumOfTwinPrimeNumber twinPrimeNumber = new SumOfTwinPrimeNumber(
 				Integer.parseInt(reader.readLine()));
-		twinPrimeNumber.printSumOfTwinPrimeNumber();
+		long sum = twinPrimeNumber.printSumOfTwinPrimeNumber();
+		System.out.println("The sum of twin prime numbers is : " + sum);
 	}
 }

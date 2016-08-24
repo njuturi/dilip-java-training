@@ -9,6 +9,9 @@ public class SumOfNaturalNumbers {
 	private int number;
 
 	public SumOfNaturalNumbers(int number) {
+		if (number <= 0) {
+			throw new NumberFormatException();
+		}
 		this.number = number;
 	}
 

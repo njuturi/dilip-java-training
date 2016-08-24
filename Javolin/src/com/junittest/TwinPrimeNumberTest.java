@@ -1,0 +1,49 @@
+package com.junittest;
+
+import static org.junit.Assert.*;
+
+import java.util.Arrays;
+import java.util.List;
+
+import org.junit.Test;
+
+import com.javolin.SumOfTwinPrimeNumber;
+import com.javolin.TwinPrimeNumber;
+
+public class TwinPrimeNumberTest {
+
+	@Test
+	public void positiveTest() throws IllegalAccessException {
+		TwinPrimeNumber twinPrime = new TwinPrimeNumber(11);
+		List<Long> actual = twinPrime.printTwinPrimeNumber();
+		List<Long> expected = Arrays.asList((long)3,(long)5,(long)5,(long)7,(long)11,(long)13);
+		assertEquals(expected, actual);
+	}
+
+	@Test
+	public void lowerThanTwinPrimeRange() throws IllegalAccessException {
+		try{
+			TwinPrimeNumber twinPrime = new TwinPrimeNumber(2);
+		}catch(IllegalArgumentException e){
+			fail("Please enter the number more than 5");
+		}
+	}
+	
+	@Test
+	public void zeroTest() throws IllegalAccessException {
+		try{
+			TwinPrimeNumber twinPrime = new TwinPrimeNumber(0);
+		}catch(IllegalArgumentException e){
+			fail("Please enter the number more than 5");
+		}
+	}
+	
+	@Test
+	public void negativeNumberTest() throws IllegalAccessException {
+		try{
+			TwinPrimeNumber twinPrime = new TwinPrimeNumber(-1);
+		}catch(IllegalArgumentException e){
+			fail("Please enter the number more than 5");
+		}
+	}
+}
