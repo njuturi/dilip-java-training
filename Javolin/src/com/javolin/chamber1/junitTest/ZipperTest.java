@@ -5,8 +5,9 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 import com.javolin.chamber1.HomeAddress;
+import com.javolin.chamber1.ZipperGenerator;
 
-public class HomeAddressTest {
+public class ZipperTest {
 
 	@Test
 	public void test() {
@@ -19,6 +20,15 @@ public class HomeAddressTest {
 		homeAddress.setApartmentName("pearl Village");
 		homeAddress.setFlatNumber(15);
 		assertEquals("India", homeAddress.getCountry());
+		
+		ZipperGenerator zipper = new ZipperGenerator();
+		int i = 0;
+		while(i!=10){
+			String zip = zipper.generator();
+			System.out.println(zip);
+			i++;
+		}
+		
 	}
 
 }
