@@ -10,6 +10,43 @@ public class Geolocation {
 		this.latitude = latitude;
 		this.longitude = longitude;
 	}
+
+	// public void setLatitude(double latitude) {
+	// this.latitude = latitude;
+	// }
+	//
+	// public String getLatitude() {
+	// long degree = (long) latitude;
+	// double factionalPart = (long) (latitude - degree);
+	//
+	// double minuteSec = factionalPart * 3600;
+	// double minute = minuteSec / 60;
+	// double sec = minuteSec % 60;
+	//
+	// String lat = Double.toString(degree) + Double.toString(minute)
+	// + Double.toString(sec);
+	// System.out.println(lat);
+	// return lat;
+	//
+	// }
+	//
+	// public LongLat setLongitude(double longitude) {
+	// this.longitude = longitude;
+	// return this;
+	// }
+	//
+	// public String getLongitude(double longitude) {
+	// long degree = (long) longitude;
+	// double factionalPart = (long) (longitude - degree);
+	//
+	// double minuteSec = factionalPart * 3600;
+	// double minute = minuteSec / 60;
+	// double sec = minuteSec % 60;
+	//
+	// String lon = Double.toString(degree) + Double.toString(minute)
+	// + Double.toString(sec);
+	// return lon;
+	// }
 	public double getLatitude() {
 		return latitude;
 	}
