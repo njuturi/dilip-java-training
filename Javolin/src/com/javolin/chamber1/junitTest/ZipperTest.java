@@ -10,6 +10,7 @@ import org.junit.Test;
 
 import com.javolin.chamber1.Geolocation;
 import com.javolin.chamber1.HomeAddress;
+import com.javolin.chamber1.ZipperDistance;
 import com.javolin.chamber1.ZipperGenerator;
 
 public class ZipperTest {
@@ -95,5 +96,54 @@ public class ZipperTest {
 			System.out.println("Longitude = "
 					+ addrObj.getGeolocation().getLongitude());
 		}
+	}
+
+	@Test
+	public void getZipperDistanceTest() {
+
+		// Created first address object for John
+		HomeAddress homeAddress = new HomeAddress();
+		homeAddress.setGeolocation(new Geolocation(55.5034070, -01.1275920));
+		homeAddress.setCountry("Nepal");
+		homeAddress.setState("Morang");
+		homeAddress.setStreetAddress("Mahendra Marga");
+		homeAddress.setApartmentName("My Home");
+		homeAddress.setFlatNumber(21);
+		assertEquals("Nepal", homeAddress.getCountry());
+
+		// Created second address object for Tom
+		HomeAddress homeAddress2 = new HomeAddress();
+		homeAddress2.setGeolocation(new Geolocation(41.5034070, -0.1275920));
+		homeAddress2.setCountry("India");
+		homeAddress2.setState("Telangana");
+		homeAddress2.setStreetAddress("CMC Enclave");
+		homeAddress2.setApartmentName("pearl Village");
+		homeAddress2.setFlatNumber(15);
+		assertEquals("India", homeAddress2.getCountry());
+
+		// Created second address object for Adam
+		HomeAddress homeAddress3 = new HomeAddress();
+		homeAddress3.setGeolocation(new Geolocation(31.5034070, -0.1275920));
+		homeAddress3.setCountry("United Kindom");
+		homeAddress3.setState("London");
+		homeAddress3.setStreetAddress("10 Downing Street");
+		homeAddress3.setApartmentName("Kings Tower");
+		homeAddress3.setFlatNumber(18);
+		assertEquals("United Kindom", homeAddress3.getCountry());
+
+		System.out.println("Hi John! You zipper code for your address is: "
+				+ ZipperGenerator.generator(homeAddress));
+		System.out.println("Hi Tom! You zipper code for your address is: "
+				+ ZipperGenerator.generator(homeAddress2));
+		System.out.println("Hi Adam! You zipper code for your address is: "
+				+ ZipperGenerator.generator(homeAddress3));
+
+		Scanner scan = new Scanner(System.in);
+		System.out
+				.println("Please enter two zippers to find the distance between them: ");
+		String zipper1 = scan.nextLine();
+		String zipper2 = scan.nextLine();
+		double distance = ZipperDistance.getDistance(zipper1, zipper2);
+		System.out.println("The distance is: " + distance + " KM");
 	}
 }

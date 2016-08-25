@@ -11,6 +11,7 @@ public class Geolocation {
 		this.longitude = longitude;
 	}
 
+	//geo location to degree -> https://developer.salesforce.com/forums/?id=906F000000092lGIAQ
 	// public void setLatitude(double latitude) {
 	// this.latitude = latitude;
 	// }
