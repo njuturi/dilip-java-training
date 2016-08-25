@@ -1,7 +1,5 @@
 package com.javolin.chamber1;
 
-import java.text.DecimalFormat;
-
 public class Geolocation {
 	private double latitude;
 	private double longitude;
@@ -10,44 +8,7 @@ public class Geolocation {
 		this.latitude = latitude;
 		this.longitude = longitude;
 	}
-
-	//geo location to degree -> https://developer.salesforce.com/forums/?id=906F000000092lGIAQ
-	// public void setLatitude(double latitude) {
-	// this.latitude = latitude;
-	// }
-	//
-	// public String getLatitude() {
-	// long degree = (long) latitude;
-	// double factionalPart = (long) (latitude - degree);
-	//
-	// double minuteSec = factionalPart * 3600;
-	// double minute = minuteSec / 60;
-	// double sec = minuteSec % 60;
-	//
-	// String lat = Double.toString(degree) + Double.toString(minute)
-	// + Double.toString(sec);
-	// System.out.println(lat);
-	// return lat;
-	//
-	// }
-	//
-	// public LongLat setLongitude(double longitude) {
-	// this.longitude = longitude;
-	// return this;
-	// }
-	//
-	// public String getLongitude(double longitude) {
-	// long degree = (long) longitude;
-	// double factionalPart = (long) (longitude - degree);
-	//
-	// double minuteSec = factionalPart * 3600;
-	// double minute = minuteSec / 60;
-	// double sec = minuteSec % 60;
-	//
-	// String lon = Double.toString(degree) + Double.toString(minute)
-	// + Double.toString(sec);
-	// return lon;
-	// }
+	
 	public double getLatitude() {
 		return latitude;
 	}
@@ -65,4 +26,53 @@ public class Geolocation {
 		this.longitude = longitude;
 		return this;
 	}
+
+	public String getLatitudeStringForm() {
+
+		// For getting fraction part from double
+		// http://stackoverflow.com/questions/343584/how-do-i-get-whole-and-fractional-parts-from-double-in-jsp-java
+
+		// to get North, East, west, south direction
+		// https://developer.salesforce.com/forums/?id=906F000000092lGIAQ
+		String direction = "N";
+		if (latitude < 0) {
+			latitude = latitude * -1;
+			direction = "S";
+		}
+
+		int degree = (int) latitude;
+		double factionalPart1 = latitude - (double) degree;
+
+		double minuteSec = factionalPart1 * 60;
+		double minute = (int) minuteSec;
+
+		double factionalPart2 = minuteSec * 60;
+		double sec = (int) factionalPart2;
+
+		String lat = Integer.toString(degree) + "°" + Integer.toString((int) minute)
+				+ "'" + Integer.toString((int) sec) + "''" + " " + direction;
+		return lat;
+
+	}
+
+	public String getLongitudeStringForm() {
+		String direction = "E";
+		if (longitude < 0) {
+			longitude = longitude * -1;
+			direction = "W";
+		}
+		int degree = (int) longitude;
+		double factionalPart1 = longitude - (double) degree;
+
+		double minuteSec = factionalPart1 * 60;
+		double minute = (int) minuteSec;
+
+		double factionalPart2 = minuteSec * 60;
+		double sec = (int) factionalPart2;
+
+		String lon = Integer.toString(degree) + "°" + Integer.toString((int)minute)
+				+ "'" + Integer.toString((int)sec) + "''" + " " + direction;
+		return lon;
+	}
+
 }

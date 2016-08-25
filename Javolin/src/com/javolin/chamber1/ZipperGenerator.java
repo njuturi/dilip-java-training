@@ -12,6 +12,8 @@ public class ZipperGenerator {
 	public static String Numeric = "0123456789";
 	public static int aphabetLength = Aphabet.length(); // 26
 	public static int numericLength = Numeric.length(); // 10
+
+	// Using below map as a directory
 	private Map<String, HomeAddress> zipperAddressMap = new HashMap<>();
 
 	public String generator(HomeAddress homeAddress) {

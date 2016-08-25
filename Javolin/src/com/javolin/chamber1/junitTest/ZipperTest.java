@@ -90,9 +90,9 @@ public class ZipperTest {
 		String userZipper = scan.nextLine();
 		// will throw null pointer if other than existing zipper is given, so
 		// kept null check
-		if (zipperGenerator.getZipperAddressMap().get(userZipper) != null) {
-			HomeAddress addrObj = (HomeAddress) zipperGenerator
-					.getZipperAddressMap().get(userZipper);
+		HomeAddress addrObj = zipperGenerator.getZipperAddressMap().get(
+				userZipper);
+		if (addrObj != null) {
 			System.out.println("Country = " + addrObj.getCountry());
 			System.out.println("State = " + addrObj.getState());
 			System.out.println("Streetaddress = " + addrObj.getStreetAddress());
@@ -100,9 +100,9 @@ public class ZipperTest {
 			System.out.println("ApartmentName = " + addrObj.getApartmentName());
 			System.out.println("FlatName = " + addrObj.getFlatNumber());
 			System.out.println("Latitude = "
-					+ addrObj.getGeolocation().getLatitude());
+					+ addrObj.getGeolocation().getLatitudeStringForm());
 			System.out.println("Longitude = "
-					+ addrObj.getGeolocation().getLongitude());
+					+ addrObj.getGeolocation().getLongitudeStringForm());
 		}
 	}
 
