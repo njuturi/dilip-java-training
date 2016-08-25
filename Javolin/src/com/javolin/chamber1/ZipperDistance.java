@@ -14,7 +14,7 @@ public class ZipperDistance {
 		double longitude2 = address2.getGeolocation().getLongitude();
 
 		// calculate distance between to geolocation ->
-		// http://stackoverflow.com/questions/13840516/how-to-find-my-distance-to-a-known-location-in-javascript
+		// http://stackoverflow.com/questions/5557706/calculating-distance-using-latitude-longitude-coordinates-in-kilometers-with-jav
 
 		double theta = longitude1 - longitude2;
 		double dist = Math.sin(Math.toRadians(latitude1))
@@ -23,19 +23,8 @@ public class ZipperDistance {
 				* Math.cos(Math.toRadians(latitude2))
 				* Math.cos(Math.toRadians(theta));
 
-		// return new Double((Math.toDegrees(Math.acos(theDistance))) *
-		// 69.09*1.6093).intValue();
-
 		dist = Math.toDegrees(Math.acos(dist));
 		distance = dist * 69.09 * 1.609344; // 1 miles = 1.6093 kilometer
 		return distance;
-	}
-
-	private static double degreeToRadian(double deg) {
-		return (deg * Math.PI / 180.0);
-	}
-
-	private static double radianToDegree(double rad) {
-		return (rad * 180 / Math.PI);
 	}
 }
