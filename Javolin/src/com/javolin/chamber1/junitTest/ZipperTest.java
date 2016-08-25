@@ -51,7 +51,7 @@ public class ZipperTest {
 
 		// Created second address object for Tom
 		HomeAddress homeAddress2 = new HomeAddress();
-		homeAddress.setGeolocation(new Geolocation(51.5034070, -0.1275920));
+		homeAddress2.setGeolocation(new Geolocation(51.5034070, -0.1275920));
 		homeAddress2.setCountry("India");
 		homeAddress2.setState("Telangana");
 		homeAddress2.setStreetAddress("CMC Enclave");
@@ -61,9 +61,9 @@ public class ZipperTest {
 
 		// Created second address object for Adam
 		HomeAddress homeAddress3 = new HomeAddress();
-		homeAddress.setGeolocation(new Geolocation(51.5034070, -0.1275920));
+		homeAddress3.setGeolocation(new Geolocation(51.5034070, -0.1275920));
 		homeAddress3.setCountry("United Kindom");
-		homeAddress2.setState("London");
+		homeAddress3.setState("London");
 		homeAddress3.setStreetAddress("10 Downing Street");
 		homeAddress3.setApartmentName("Kings Tower");
 		homeAddress3.setFlatNumber(18);
