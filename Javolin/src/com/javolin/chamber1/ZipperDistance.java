@@ -1,7 +1,9 @@
 package com.javolin.chamber1;
 
+import java.text.DecimalFormat;
+
 public class ZipperDistance {
-	public static double getDistance(HomeAddress homeAdd, HomeAddress homeAdd1) {
+	public static String getDistance(HomeAddress homeAdd, HomeAddress homeAdd1) {
 		double distance = 0;
 
 		double latitude1 = homeAdd.getGeolocation().getLatitude();
@@ -21,6 +23,12 @@ public class ZipperDistance {
 
 		dist = Math.toDegrees(Math.acos(dist));
 		distance = dist * 69.09 * 1.609344; // 1 miles = 1.6093 kilometer
-		return distance;
+
+		// Convert to 2 decimal points
+		// https://www.mkyong.com/java/java-display-double-in-2-decimal-points/
+		DecimalFormat dFormat = new DecimalFormat(".##");
+		String d = dFormat.format(distance);
+
+		return d;
 	}
 }

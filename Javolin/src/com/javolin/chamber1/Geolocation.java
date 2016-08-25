@@ -49,8 +49,9 @@ public class Geolocation {
 		double factionalPart2 = minuteSec * 60;
 		double sec = (int) factionalPart2;
 
-		String lat = Integer.toString(degree) + "°" + Integer.toString((int) minute)
-				+ "'" + Integer.toString((int) sec) + "''" + " " + direction;
+		String lat = Integer.toString(degree) + "°"
+				+ Integer.toString((int) minute) + "'"
+				+ Integer.toString((int) sec) + "''" + " " + direction;
 		return lat;
 
 	}
@@ -70,8 +71,9 @@ public class Geolocation {
 		double factionalPart2 = minuteSec * 60;
 		double sec = (int) factionalPart2;
 
-		String lon = Integer.toString(degree) + "°" + Integer.toString((int)minute)
-				+ "'" + Integer.toString((int)sec) + "''" + " " + direction;
+		String lon = Integer.toString(degree) + "°"
+				+ Integer.toString((int) minute) + "'"
+				+ Integer.toString((int) sec) + "''" + " " + direction;
 		return lon;
 	}
 

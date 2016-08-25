@@ -60,7 +60,7 @@ public class ZipperTest {
 
 		// Created second address object for Tom
 		HomeAddress homeAddress2 = new HomeAddress();
-		homeAddress2.setGeolocation(new Geolocation(51.5034070, -0.1275920));
+		homeAddress2.setGeolocation(new Geolocation(17.4625110, 78.3460410));
 		homeAddress2.setCountry("India");
 		homeAddress2.setState("Telangana");
 		homeAddress2.setStreetAddress("CMC Enclave");
@@ -68,9 +68,10 @@ public class ZipperTest {
 		homeAddress2.setFlatNumber(15);
 		assertEquals("India", homeAddress2.getCountry());
 
-		// Created second address object for Adam
+		// Created second address object for Adam - Gachibowli
 		HomeAddress homeAddress3 = new HomeAddress();
-		homeAddress3.setGeolocation(new Geolocation(51.5034070, -0.1275920));
+		// http://en.mygeoposition.com/ to know your geolocation
+		homeAddress3.setGeolocation(new Geolocation(17.4400800, 78.3489170));
 		homeAddress3.setCountry("United Kindom");
 		homeAddress3.setState("London");
 		homeAddress3.setStreetAddress("10 Downing Street");
@@ -121,7 +122,7 @@ public class ZipperTest {
 
 		// Created second address object for Tom
 		HomeAddress homeAddress2 = new HomeAddress();
-		homeAddress2.setGeolocation(new Geolocation(41.5034070, -0.1275920));
+		homeAddress2.setGeolocation(new Geolocation(17.4625110, 78.3460410));
 		homeAddress2.setCountry("India");
 		homeAddress2.setState("Telangana");
 		homeAddress2.setStreetAddress("CMC Enclave");
@@ -131,7 +132,7 @@ public class ZipperTest {
 
 		// Created second address object for Adam
 		HomeAddress homeAddress3 = new HomeAddress();
-		homeAddress3.setGeolocation(new Geolocation(31.5034070, -0.1275920));
+		homeAddress3.setGeolocation(new Geolocation(17.4400800, 78.3489170));
 		homeAddress3.setCountry("United Kindom");
 		homeAddress3.setState("London");
 		homeAddress3.setStreetAddress("10 Downing Street");
@@ -155,7 +156,7 @@ public class ZipperTest {
 				.get(zipper1);
 		HomeAddress homeAdd1 = zipperGenerator.getZipperAddressMap().get(
 				zipper2);
-		double distance = ZipperDistance.getDistance(homeAdd, homeAdd1);
+		String distance = ZipperDistance.getDistance(homeAdd, homeAdd1);
 		scan.close();
 		System.out.println("The distance is: " + distance + " KM");
 	}
