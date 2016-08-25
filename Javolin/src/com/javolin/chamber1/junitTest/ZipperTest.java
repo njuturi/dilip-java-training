@@ -6,6 +6,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import com.javolin.chamber1.Geolocation;
@@ -14,6 +15,13 @@ import com.javolin.chamber1.ZipperDistance;
 import com.javolin.chamber1.ZipperGenerator;
 
 public class ZipperTest {
+
+	public ZipperGenerator zipperGenerator;
+
+	@Before
+	public void setUp() {
+		this.zipperGenerator = new ZipperGenerator();
+	}
 
 	@Test
 	public void getZipperCodeTest() {
@@ -28,7 +36,7 @@ public class ZipperTest {
 		homeAddress.setFlatNumber(15);
 
 		System.out.println("Hi Dilip, the zipper code for your address is: "
-				+ ZipperGenerator.generator(homeAddress));
+				+ this.zipperGenerator.generator(homeAddress));
 		System.out.println("Latitude = "
 				+ homeAddress.getGeolocation().getLatitude());
 		System.out.println("Longitude = "
@@ -71,20 +79,20 @@ public class ZipperTest {
 		assertEquals("United Kindom", homeAddress3.getCountry());
 
 		System.out.println("Hi John! You zipper code for your address is: "
-				+ ZipperGenerator.generator(homeAddress));
+				+ zipperGenerator.generator(homeAddress));
 		System.out.println("Hi Tom! You zipper code for your address is: "
-				+ ZipperGenerator.generator(homeAddress2));
+				+ zipperGenerator.generator(homeAddress2));
 		System.out.println("Hi Adam! You zipper code for your address is: "
-				+ ZipperGenerator.generator(homeAddress3));
+				+ zipperGenerator.generator(homeAddress3));
 
 		Scanner scan = new Scanner(System.in);
 		System.out.println("Please enter zipper to get Full Address: ");
 		String userZipper = scan.nextLine();
 		// will throw null pointer if other than existing zipper is given, so
 		// kept null check
-		if (ZipperGenerator.zipperAddressMap.get(userZipper) != null) {
-			HomeAddress addrObj = (HomeAddress) ZipperGenerator.zipperAddressMap
-					.get(userZipper);
+		if (zipperGenerator.getZipperAddressMap().get(userZipper) != null) {
+			HomeAddress addrObj = (HomeAddress) zipperGenerator
+					.getZipperAddressMap().get(userZipper);
 			System.out.println("Country = " + addrObj.getCountry());
 			System.out.println("State = " + addrObj.getState());
 			System.out.println("Streetaddress = " + addrObj.getStreetAddress());
@@ -132,18 +140,23 @@ public class ZipperTest {
 		assertEquals("United Kindom", homeAddress3.getCountry());
 
 		System.out.println("Hi John! You zipper code for your address is: "
-				+ ZipperGenerator.generator(homeAddress));
+				+ zipperGenerator.generator(homeAddress));
 		System.out.println("Hi Tom! You zipper code for your address is: "
-				+ ZipperGenerator.generator(homeAddress2));
+				+ zipperGenerator.generator(homeAddress2));
 		System.out.println("Hi Adam! You zipper code for your address is: "
-				+ ZipperGenerator.generator(homeAddress3));
+				+ zipperGenerator.generator(homeAddress3));
 
 		Scanner scan = new Scanner(System.in);
 		System.out
 				.println("Please enter two zippers to find the distance between them: ");
 		String zipper1 = scan.nextLine();
 		String zipper2 = scan.nextLine();
-		double distance = ZipperDistance.getDistance(zipper1, zipper2);
+		HomeAddress homeAdd = zipperGenerator.getZipperAddressMap()
+				.get(zipper1);
+		HomeAddress homeAdd1 = zipperGenerator.getZipperAddressMap().get(
+				zipper2);
+		double distance = ZipperDistance.getDistance(homeAdd, homeAdd1);
+		scan.close();
 		System.out.println("The distance is: " + distance + " KM");
 	}
 }

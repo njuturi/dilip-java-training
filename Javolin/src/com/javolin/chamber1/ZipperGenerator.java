@@ -12,9 +12,9 @@ public class ZipperGenerator {
 	public static String Numeric = "0123456789";
 	public static int aphabetLength = Aphabet.length(); // 26
 	public static int numericLength = Numeric.length(); // 10
-	public static Map<String, Object> zipperAddressMap = new HashMap<String, Object>();
+	private Map<String, HomeAddress> zipperAddressMap = new HashMap<>();
 
-	public static String generator(HomeAddress homeAddress) {
+	public String generator(HomeAddress homeAddress) {
 		Set<String> zipperSet = new HashSet<String>();
 		String zipper = "";
 		Random rand = new Random();
@@ -43,4 +43,13 @@ public class ZipperGenerator {
 
 		return zipper;
 	}
+
+	public Map<String, HomeAddress> getZipperAddressMap() {
+		return zipperAddressMap;
+	}
+
+	public void setZipperAddressMap(Map<String, HomeAddress> zipperAddressMap) {
+		this.zipperAddressMap = zipperAddressMap;
+	}
+
 }

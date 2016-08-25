@@ -1,17 +1,13 @@
 package com.javolin.chamber1;
 
 public class ZipperDistance {
-	public static double getDistance(String zipper1, String zipper2) {
+	public static double getDistance(HomeAddress homeAdd, HomeAddress homeAdd1) {
 		double distance = 0;
-		HomeAddress address1 = (HomeAddress) ZipperGenerator.zipperAddressMap
-				.get(zipper1);
-		HomeAddress address2 = (HomeAddress) ZipperGenerator.zipperAddressMap
-				.get(zipper2);
 
-		double latitude1 = address1.getGeolocation().getLatitude();
-		double longitude1 = address1.getGeolocation().getLongitude();
-		double latitude2 = address2.getGeolocation().getLatitude();
-		double longitude2 = address2.getGeolocation().getLongitude();
+		double latitude1 = homeAdd.getGeolocation().getLatitude();
+		double longitude1 = homeAdd.getGeolocation().getLongitude();
+		double latitude2 = homeAdd1.getGeolocation().getLatitude();
+		double longitude2 = homeAdd1.getGeolocation().getLongitude();
 
 		// calculate distance between to geolocation ->
 		// http://stackoverflow.com/questions/5557706/calculating-distance-using-latitude-longitude-coordinates-in-kilometers-with-jav
