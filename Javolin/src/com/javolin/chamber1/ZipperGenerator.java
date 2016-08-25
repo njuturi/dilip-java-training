@@ -8,10 +8,10 @@ import java.util.Set;
 
 public class ZipperGenerator {
 
-	public static String Aphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-	public static String Numeric = "0123456789";
-	public static int aphabetLength = Aphabet.length(); // 26
-	public static int numericLength = Numeric.length(); // 10
+	public static String Aphabet = "ABCDEFGHJKMNPQRSTUVWXYZ";
+	public static String Numeric = "23456789";
+	public static int aphabetLength = Aphabet.length(); 
+	public static int numericLength = Numeric.length(); 
 
 	// Using below map as a directory
 	private Map<String, HomeAddress> zipperAddressMap = new HashMap<>();

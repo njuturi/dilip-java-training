@@ -2,8 +2,6 @@ package com.javolin.chamber1.junitTest;
 
 import static org.junit.Assert.*;
 
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Scanner;
 
 import org.junit.Before;
@@ -112,7 +110,7 @@ public class ZipperTest {
 
 		// Created first address object for John
 		HomeAddress homeAddress = new HomeAddress();
-		homeAddress.setGeolocation(new Geolocation(55.5034070, -01.1275920));
+		homeAddress.setGeolocation(new Geolocation(17.5625110, 78.3460410));
 		homeAddress.setCountry("Nepal");
 		homeAddress.setState("Morang");
 		homeAddress.setStreetAddress("Mahendra Marga");
@@ -158,6 +156,6 @@ public class ZipperTest {
 				zipper2);
 		String distance = ZipperDistance.getDistance(homeAdd, homeAdd1);
 		scan.close();
-		System.out.println("The distance is: " + distance + " KM");
+		System.out.println("The distance is: " + distance);
 	}
 }
