@@ -1,8 +1,6 @@
 package com.javolin.chamber1;
 
 public class HomeAddress {
-	private double longitude;
-	private double latitude;
 	private Geolocation geolocation;
 	private String country;
 	private String state;
