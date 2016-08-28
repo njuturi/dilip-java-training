@@ -18,7 +18,7 @@ public class Base64decode {
 		for (int i = 0; i < string.length(); i = i + 4) {
 			// concatenate each 6 bits character to make it 24 bits
 			int n = (BASE64.indexOf(string.charAt(i)) << 18)
-					+ (BASE64.indexOf(string.charAt(i)) << 12)
+					+ (BASE64.indexOf(string.charAt(i + 1)) << 12)
 					+ (BASE64.indexOf(string.charAt(i + 2)) << 6)
 					+ (BASE64.indexOf(string.charAt(i + 3)));
 			// Converting to original 3 bytes
