@@ -8,7 +8,6 @@ import java.util.List;
 import org.junit.Test;
 
 import com.github.dilipptt.programs.Anagram;
-import com.github.dilipptt.programs.LargestAnagram;
 
 public class AnagramTest {
 
@@ -23,7 +22,7 @@ public class AnagramTest {
 	@Test
 	public void zeroNumberTest() {
 		try{
-			Anagram anagram = new Anagram("0");
+			new Anagram("0");
 		}catch(IllegalArgumentException e){
 			fail("Number is Invalid");
 		}
@@ -32,7 +31,7 @@ public class AnagramTest {
 	@Test
 	public void nullTest() {
 		try{
-			Anagram anagram = new Anagram("");
+			new Anagram("");
 		}catch(IllegalArgumentException e){
 			fail("Number is Invalid");
 		}
@@ -41,7 +40,7 @@ public class AnagramTest {
 	@Test
 	public void negativeNumberTest() {
 		try{
-			Anagram anagram = new Anagram("-123");
+			new Anagram("-123");
 		}catch(IllegalArgumentException e){
 			fail("Number is Invalid");
 		}

@@ -24,12 +24,10 @@ public class BinaryToDecimalTest {
 	
 	@Test
 	public void nonBinaryNumberTest() throws Exception {
-		BinaryToDecimal binaryToDecimal = new BinaryToDecimal(0); // 1131001 --> not a binary number
 		try{
-			long num = binaryToDecimal.convertToDecimal();
-			System.out.println("I am catching exception");
+			new BinaryToDecimal(11311);
 		}catch(Exception e){
-			assert(true);
+			fail("The number is not a valid binary number");
 		}
 	}
 }

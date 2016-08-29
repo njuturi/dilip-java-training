@@ -53,7 +53,6 @@ public class BinaryToHex {
 	public String toHexaDecimalNum(int decimalNum) {
 		int remainder = 0;
 		int temp = decimalNum;
-		int i = 0;
 		String ch = "";
 		while (temp != 0) {
 			remainder = temp % 16;
@@ -105,7 +104,6 @@ public class BinaryToHex {
 				break;
 			}
 			
-			i++;
 			temp = temp / 16;
 		}
 		return ch;

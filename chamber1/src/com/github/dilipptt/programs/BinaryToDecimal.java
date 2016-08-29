@@ -3,13 +3,20 @@ package com.github.dilipptt.programs;
 //Convert a given binary number to decimal representation.
 
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class BinaryToDecimal {
 	private long number;
 
 	public BinaryToDecimal(long number) {
+		String num = Long.toString(number);
+		long size = num.length();
+		for (int j = 0; j < size; j++) {
+			long digit = Character.getNumericValue(num.charAt(j));
+			if(digit>1){
+				throw new IllegalArgumentException();
+			}
+		}
 		this.number = number;
 	}
 
@@ -29,7 +36,7 @@ public class BinaryToDecimal {
 																	// integer
 																	// -->
 																	// http://stackoverflow.com/questions/19388037/converting-characters-to-integers-in-java
-			if(decimal>1){
+			if (decimal > 1) {
 				throw new Exception("Not a binary number");
 			}
 			sum = sum + decimal * (long) Math.pow(2, i);
