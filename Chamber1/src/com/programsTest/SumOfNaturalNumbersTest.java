@@ -1,27 +1,27 @@
-package com.junittest;
+package com.programsTest;
 
 import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import com.programs.SumFirstNPowerOf2;
 import com.programs.SumOfCubesOfNaturalNumbers;
+import com.programs.SumOfNaturalNumbers;
 
-public class SumOfCubesOfNaturalNumbersTest {
+public class SumOfNaturalNumbersTest {
 
 	@Test
 	public void positiveTest1() {
-		SumOfCubesOfNaturalNumbers sum = new SumOfCubesOfNaturalNumbers(3);
-		int actual = sum.sumOfCubesOfNaturalNumbers();
-		int expected = 36;
+		SumOfNaturalNumbers sum = new SumOfNaturalNumbers(3);
+		int actual = sum.sumOfNaturalNumbers();
+		int expected = 6;
 		assertEquals(expected, actual);
 	}
 	
 	@Test
 	public void positiveTest2s() {
-		SumOfCubesOfNaturalNumbers sum = new SumOfCubesOfNaturalNumbers(50);
-		int actual = sum.sumOfCubesOfNaturalNumbers();
-		int expected = 1625625;
+		SumOfNaturalNumbers sum = new SumOfNaturalNumbers(10);
+		int actual = sum.sumOfNaturalNumbers();
+		int expected = 55;
 		assertEquals(expected, actual);
 	}
 	
@@ -29,7 +29,7 @@ public class SumOfCubesOfNaturalNumbersTest {
 	@Test
 	public void sumOfNegativeNumberTest() {
 		try {
-			SumOfCubesOfNaturalNumbers sum = new SumOfCubesOfNaturalNumbers(-3);
+			SumOfNaturalNumbers sum = new SumOfNaturalNumbers(-3);
 		} catch (IllegalArgumentException e) {
 			fail("Number should be non negative");
 		}
@@ -38,7 +38,7 @@ public class SumOfCubesOfNaturalNumbersTest {
 	@Test
 	public void zeroNumberTest() {
 		try {
-			SumOfCubesOfNaturalNumbers sum = new SumOfCubesOfNaturalNumbers(0);
+			SumOfNaturalNumbers sum = new SumOfNaturalNumbers(0);
 		} catch (IllegalArgumentException e) {
 			fail("Number should be zero");
 		}
