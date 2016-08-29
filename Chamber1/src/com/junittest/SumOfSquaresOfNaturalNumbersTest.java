@@ -4,8 +4,8 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import com.javolin.SumOfNaturalNumbers;
-import com.javolin.SumOfSquaresOfNaturalNumbers;
+import com.programs.SumOfNaturalNumbers;
+import com.programs.SumOfSquaresOfNaturalNumbers;
 
 public class SumOfSquaresOfNaturalNumbersTest {
 

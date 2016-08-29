@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import com.javolin.CounterList;
+import com.programs.CounterList;
 
 public class CounterListTest {
 

@@ -4,8 +4,8 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import com.javolin.LargestAnagram;
-import com.javolin.SmallestAnagram;
+import com.programs.LargestAnagram;
+import com.programs.SmallestAnagram;
 
 public class SmallestAnagramTest {
 

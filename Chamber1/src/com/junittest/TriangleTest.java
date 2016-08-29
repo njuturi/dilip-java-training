@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import com.javolin.Triangle;
+import com.programs.Triangle;
 
 public class TriangleTest {
 

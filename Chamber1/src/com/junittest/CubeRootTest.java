@@ -5,7 +5,7 @@ import junit.framework.Assert;
 
 import org.junit.Test;
 
-import com.javolin.CubeRoot;
+import com.programs.CubeRoot;
 
 public class CubeRootTest {
 

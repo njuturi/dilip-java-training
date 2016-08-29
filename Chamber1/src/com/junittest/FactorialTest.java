@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import com.javolin.Factorial;
+import com.programs.Factorial;
 
 public class FactorialTest {
 	

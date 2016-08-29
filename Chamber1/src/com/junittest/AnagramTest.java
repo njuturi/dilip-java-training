@@ -7,8 +7,8 @@ import java.util.List;
 
 import org.junit.Test;
 
-import com.javolin.Anagram;
-import com.javolin.LargestAnagram;
+import com.programs.Anagram;
+import com.programs.LargestAnagram;
 
 public class AnagramTest {
 

@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import com.javolin.DecimalToOctal;
+import com.programs.DecimalToOctal;
 
 public class DecimalToOctalTest {
 

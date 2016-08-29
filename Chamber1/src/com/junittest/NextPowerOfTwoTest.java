@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import com.javolin.NextPowerOfTwo;
+import com.programs.NextPowerOfTwo;
 
 public class NextPowerOfTwoTest {
 

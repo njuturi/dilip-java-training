@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import com.javolin.SumFirstNPowerOf2;
+import com.programs.SumFirstNPowerOf2;
 
 public class SumFirstNPowerOf2Test {
 

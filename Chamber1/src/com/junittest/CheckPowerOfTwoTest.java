@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import com.javolin.CheckPowerOfTwo;
+import com.programs.CheckPowerOfTwo;
 
 public class CheckPowerOfTwoTest {
 

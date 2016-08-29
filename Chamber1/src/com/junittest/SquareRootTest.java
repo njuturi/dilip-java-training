@@ -4,8 +4,8 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import com.javolin.CubeRoot;
-import com.javolin.SquareRoot;
+import com.programs.CubeRoot;
+import com.programs.SquareRoot;
 
 public class SquareRootTest {
 

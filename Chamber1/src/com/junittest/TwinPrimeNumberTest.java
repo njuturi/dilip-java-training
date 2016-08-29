@@ -7,8 +7,8 @@ import java.util.List;
 
 import org.junit.Test;
 
-import com.javolin.SumOfTwinPrimeNumber;
-import com.javolin.TwinPrimeNumber;
+import com.programs.SumOfTwinPrimeNumber;
+import com.programs.TwinPrimeNumber;
 
 public class TwinPrimeNumberTest {
 

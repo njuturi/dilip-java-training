@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import com.javolin.CarsFeature;
+import com.programs.CarsFeature;
 
 public class CarsFeatureTest {
 

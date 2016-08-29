@@ -1,8 +1,10 @@
 package com.junittest;
 
 import static org.junit.Assert.*;
+
 import org.junit.Test;
-import com.javolin.PrimeSum;
+
+import com.programs.PrimeSum;
 
 public class PrimeSumTest {
 

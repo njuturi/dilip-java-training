@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import com.javolin.BinaryToDecimal;
+import com.programs.BinaryToDecimal;
 
 public class BinaryToDecimalTest {
 
