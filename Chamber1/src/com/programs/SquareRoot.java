@@ -6,13 +6,13 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class SquareRoot {
-	double number;
+	long number;
 
-	public SquareRoot(double number) {
+	public SquareRoot(long number) {
 		this.number = number;
 	}
 	 
-	public double getValue(){
+	public long getValue(){
 		return number;
 	}
 
@@ -48,7 +48,7 @@ public class SquareRoot {
 		System.out.print("Enter the number: ");
 		BufferedReader reader = new BufferedReader(new InputStreamReader(
 				System.in));
-		SquareRoot squareRoot = new SquareRoot(Double.parseDouble(reader
+		SquareRoot squareRoot = new SquareRoot(Integer.parseInt(reader
 				.readLine()));
 		int squareRootNum = squareRoot.printSquareRoot();
 		System.out.print("The square root of the number is: "

@@ -13,7 +13,7 @@ import com.programs.TwinPrimeNumber;
 public class TwinPrimeNumberTest {
 
 	@Test
-	public void positiveTest() throws IllegalAccessException {
+	public void positiveTest() throws IllegalArgumentException {
 		TwinPrimeNumber twinPrime = new TwinPrimeNumber(11);
 		List<Long> actual = twinPrime.printTwinPrimeNumber();
 		List<Long> expected = Arrays.asList((long)3,(long)5,(long)5,(long)7,(long)11,(long)13);
@@ -21,7 +21,7 @@ public class TwinPrimeNumberTest {
 	}
 
 	@Test
-	public void lowerThanTwinPrimeRange() throws IllegalAccessException {
+	public void lowerThanTwinPrimeRange() throws IllegalArgumentException {
 		try{
 			TwinPrimeNumber twinPrime = new TwinPrimeNumber(2);
 		}catch(IllegalArgumentException e){
@@ -30,7 +30,7 @@ public class TwinPrimeNumberTest {
 	}
 	
 	@Test
-	public void zeroTest() throws IllegalAccessException {
+	public void zeroTest() throws IllegalArgumentException {
 		try{
 			TwinPrimeNumber twinPrime = new TwinPrimeNumber(0);
 		}catch(IllegalArgumentException e){
@@ -39,7 +39,7 @@ public class TwinPrimeNumberTest {
 	}
 	
 	@Test
-	public void negativeNumberTest() throws IllegalAccessException {
+	public void negativeNumberTest() throws IllegalArgumentException {
 		try{
 			TwinPrimeNumber twinPrime = new TwinPrimeNumber(-1);
 		}catch(IllegalArgumentException e){

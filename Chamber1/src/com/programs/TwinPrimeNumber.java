@@ -12,9 +12,9 @@ import java.util.List;
 public class TwinPrimeNumber {
 	private long number;
 
-	public TwinPrimeNumber(long number) throws IllegalAccessException{
+	public TwinPrimeNumber(long number) throws IllegalArgumentException{
 		if (number <= 5) {
-			throw new IllegalAccessException();
+			throw new IllegalArgumentException();
 		}
 		this.number = number;
 	}

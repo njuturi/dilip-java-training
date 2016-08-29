@@ -10,6 +10,7 @@ import com.programs.SquareRoot;
 public class SquareRootTest {
 
 	@Test
+	// Right
 	public void positiveTest() {
 		SquareRoot squareRoot = new SquareRoot(4);
 		assertEquals(2, squareRoot.printSquareRoot());
@@ -23,7 +24,16 @@ public class SquareRootTest {
 		assertEquals(16, x * x);
 	}
 
-	//Exception test
+	// Cross-check Using Other Means
+	@Test
+	public void positiveTest2() {
+		SquareRoot squareRoot = new SquareRoot(64);
+		long x = (long) Math.sqrt(64);
+		long y = squareRoot.printSquareRoot();
+		assertEquals(x, y);
+	}
+
+	// Exception test
 	@Test
 	public void exceptionTest() {
 		SquareRoot squareRoot = new SquareRoot(0);
@@ -33,14 +43,5 @@ public class SquareRootTest {
 		} catch (Exception e) {
 			assert (true);
 		}
-	}
-	
-	// Cross-check Using Other Means
-	@Test
-	public void positiveTest2(){
-		SquareRoot squareRoot = new SquareRoot(64);
-		double x = Math.sqrt(64);
-		double y = squareRoot.printSquareRoot();
-		assertEquals(x, y, 0.001);
 	}
 }
