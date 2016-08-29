@@ -1,4 +1,5 @@
 package com.github.dilipptt.programs;
+
 // Swap the 2 numbers using bitwise xor operator.
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -9,6 +10,9 @@ public class SwappingBitwise {
 	private static int secondNum; // secondNum = 4 (100)
 
 	public SwappingBitwise(int firstNum, int secondNum) {
+		if(firstNum == secondNum){
+			throw new IllegalArgumentException();
+		}
 		SwappingBitwise.firstNum = firstNum;
 		SwappingBitwise.secondNum = secondNum;
 	}
@@ -17,6 +21,14 @@ public class SwappingBitwise {
 		firstNum = firstNum ^ secondNum; // 101 ^ 100 = 001 (1)
 		secondNum = firstNum ^ secondNum; // 001 ^ 100 = 101(5)
 		firstNum = firstNum ^ secondNum; // 001 ^ 101 = 100(4)
+	}
+
+	public int getFirstNum() {
+		return firstNum;
+	}
+
+	public int getSecondNum() {
+		return secondNum;
 	}
 
 	public static void main(String[] args) throws NumberFormatException,
