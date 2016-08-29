@@ -16,12 +16,22 @@ public class SquareRootTest {
 		assertEquals(2, squareRoot.printSquareRoot());
 	}
 
+	@Test
+	// Boundary condition
+	public void sqrtTestforZero() {
+		try {
+			SquareRoot squareRoot = new SquareRoot(0);
+		} catch (IllegalArgumentException e) {
+			fail("The number should be greater than zero");
+		}
+	}
+
 	// Inverse relationship
 	@Test
 	public void squareRootInverseTest() throws Exception {
-		SquareRoot squareRoot = new SquareRoot(16);
+		SquareRoot squareRoot = new SquareRoot(4);
 		int x = squareRoot.printSquareRoot();
-		assertEquals(16, x * x);
+		assertEquals(4, x * x);
 	}
 
 	// Cross-check Using Other Means
@@ -33,15 +43,15 @@ public class SquareRootTest {
 		assertEquals(x, y);
 	}
 
-	// Exception test
+	// force error conditions to happen and make sure appropriate exception is
+	// thrown
 	@Test
 	public void exceptionTest() {
-		SquareRoot squareRoot = new SquareRoot(0);
 		try {
+			SquareRoot squareRoot = new SquareRoot(-1);
 			squareRoot.printSquareRoot();
-			fail("Should have thrown an exception");
-		} catch (Exception e) {
-			assert (true);
+		} catch (IllegalArgumentException e) {
+			assertTrue(true);
 		}
 	}
 }

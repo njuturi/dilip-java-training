@@ -1,4 +1,5 @@
 package com.programs;
+
 //Sum of the squares of first n natural numbers.
 
 import java.io.BufferedReader;
@@ -6,13 +7,16 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class SquareRoot {
-	long number;
+	private long number;
+	private long MAX_VALUE = 922337203685477580L;
 
 	public SquareRoot(long number) {
+		if (number <= 0 || number > MAX_VALUE)
+			throw new IllegalArgumentException();
 		this.number = number;
 	}
-	 
-	public long getValue(){
+
+	public long getValue() {
 		return number;
 	}
 
@@ -33,7 +37,7 @@ public class SquareRoot {
 					break;
 				}
 			}
-		} else if(number==0 || number<0){
+		} else if (number == 0 || number < 0) {
 			try {
 				throw new Exception("Square root is not possible");
 			} catch (Exception e) {
@@ -51,8 +55,7 @@ public class SquareRoot {
 		SquareRoot squareRoot = new SquareRoot(Integer.parseInt(reader
 				.readLine()));
 		int squareRootNum = squareRoot.printSquareRoot();
-		System.out.print("The square root of the number is: "
-				+ squareRootNum);
+		System.out.print("The square root of the number is: " + squareRootNum);
 
 	}
 }
