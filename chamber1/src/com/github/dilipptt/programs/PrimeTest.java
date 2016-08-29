@@ -2,7 +2,6 @@ package com.github.dilipptt.programs;
 
 import static org.junit.Assert.*;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -24,7 +23,7 @@ public class PrimeTest {
 	public void zeroLengthTest() {
 		try{
 			Prime prime = new Prime(0);
-			List<Integer> actual =  prime.printPrimeNumbers();
+			prime.printPrimeNumbers();
 		}catch(IllegalArgumentException e){
 			fail("Invalid parameters");
 		}
@@ -34,7 +33,7 @@ public class PrimeTest {
 	public void negativeRangeTest() {
 		try{
 			Prime prime = new Prime(-1);
-			List<Integer> actual =  prime.printPrimeNumbers();
+			prime.printPrimeNumbers();
 		}catch(IllegalArgumentException e){
 			fail("Invalid parameters");
 		}

@@ -19,7 +19,7 @@ public class SumFirstNPowerOf2Test {
 	@Test 
 	public void sumOfNegativeNumberTest() {
 		try{
-			SumFirstNPowerOf2 sum = new SumFirstNPowerOf2(-2);
+			new SumFirstNPowerOf2(-2);
 		}catch(IllegalArgumentException e){
 			fail("Number should be non negative");
 		}
@@ -28,7 +28,7 @@ public class SumFirstNPowerOf2Test {
 	@Test 
 	public void zeroNumberTest() {
 		try{
-			SumFirstNPowerOf2 sum = new SumFirstNPowerOf2(0);
+			new SumFirstNPowerOf2(0);
 		}catch(IllegalArgumentException e){
 			fail("Number should be zero");
 		}

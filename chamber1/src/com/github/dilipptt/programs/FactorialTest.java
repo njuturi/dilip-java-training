@@ -17,7 +17,7 @@ public class FactorialTest {
 	@Test
 	public void negativeNumberTest() {
 		try{
-			Factorial factorial = new Factorial(-1);
+			new Factorial(-1);
 		}catch(IllegalArgumentException e){
 			fail("Please enter the number in the range 1 to 31");
 		}
@@ -26,7 +26,7 @@ public class FactorialTest {
 	@Test
 	public void zeroNumberTest() {
 		try{
-			Factorial factorial = new Factorial(0);
+			new Factorial(0);
 		}catch(IllegalArgumentException e){
 			fail("Please enter the number in the range 1 to 31");
 		}
@@ -35,7 +35,7 @@ public class FactorialTest {
 	@Test
 	public void outofRangeTest(){
 		try {
-			Factorial factorial = new Factorial(32);
+			new Factorial(32);
 		} catch (IllegalArgumentException e) {
 			fail("Please enter the number in the range 1 to 31");
 		}

@@ -4,7 +4,6 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import com.github.dilipptt.programs.SumFirstNPowerOf2;
 import com.github.dilipptt.programs.SumOfCubesOfNaturalNumbers;
 
 public class SumOfCubesOfNaturalNumbersTest {
@@ -29,7 +28,7 @@ public class SumOfCubesOfNaturalNumbersTest {
 	@Test
 	public void sumOfNegativeNumberTest() {
 		try {
-			SumOfCubesOfNaturalNumbers sum = new SumOfCubesOfNaturalNumbers(-3);
+			new SumOfCubesOfNaturalNumbers(-3);
 		} catch (IllegalArgumentException e) {
 			fail("Number should be non negative");
 		}
@@ -38,7 +37,7 @@ public class SumOfCubesOfNaturalNumbersTest {
 	@Test
 	public void zeroNumberTest() {
 		try {
-			SumOfCubesOfNaturalNumbers sum = new SumOfCubesOfNaturalNumbers(0);
+			new SumOfCubesOfNaturalNumbers(0);
 		} catch (IllegalArgumentException e) {
 			fail("Number should be zero");
 		}

@@ -19,7 +19,7 @@ public class Factorial {
 		if (number <= 0) { // for negative numbers factorial will be zero
 			return 0;
 		}
-		System.out.print("The factorials of number " + number + " is : ");
+		//System.out.print("The factorials of number " + number + " is : ");
 		for (long i = number - 1; i >= 1; i--) {
 			number = number * i;
 		}

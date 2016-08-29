@@ -8,13 +8,12 @@ import java.io.InputStreamReader;
 public class NextLargestAnagram {
 	private static String number;
 	private static char[] charArray;
-	private static int largest;
 	private static int nextLargest = 0;
 
 	@SuppressWarnings("static-access")
 	public NextLargestAnagram(String number) {
 		this.number = number;
-		largest = Integer.parseInt(number);
+		Integer.parseInt(number);
 	}
 
 	public void toCharArray() {

@@ -9,7 +9,6 @@ import java.io.InputStreamReader;
 public class IpAddress {
 	private String ipAddress;
 	private int ipAddress2;
-	private int[] toIps;
 
 	public IpAddress(String ipAddress) {
 		String[] ch = ipAddress.split("\\.");

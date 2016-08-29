@@ -27,7 +27,7 @@ public class ReverseTest {
 	@Test
 	public void zeroArgumentTest() {
 		try {
-			Reverse reverse = new Reverse(0);
+			new Reverse(0);
 		} catch (Exception e) {
 			fail("Argument is invalid");
 		}
@@ -36,7 +36,7 @@ public class ReverseTest {
 	@Test
 	public void negativeArgumentTest() {
 		try {
-			Reverse reverse = new Reverse(-123);
+			new Reverse(-123);
 		} catch (Exception e) {
 			fail("Argument is invalid");
 		}

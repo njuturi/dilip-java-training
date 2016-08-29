@@ -25,7 +25,7 @@ public class IpAddressTest {
 	@Test
 	public void ipAddressNegativeTestCase(){
 		try{
-			IpAddress ipAddress = new IpAddress("127.256.255.255");
+			new IpAddress("127.256.255.255");
 		}catch(IllegalArgumentException e){
 			fail("Ip address in INVALID!!!");
 		}
@@ -34,7 +34,7 @@ public class IpAddressTest {
 	@Test
 	public void negativeIpAddressTest(){
 		try{
-			IpAddress ipAddress = new IpAddress("-1.256.255.255");
+			new IpAddress("-1.256.255.255");
 		}catch(IllegalArgumentException e){
 			fail("Ip address in INVALID!!!");
 		}

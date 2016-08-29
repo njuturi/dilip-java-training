@@ -19,7 +19,7 @@ public class SumOfTwinPrimeNumberTest {
 	@Test
 	public void lowerThanTwinPrimeRange() {
 		try{
-			SumOfTwinPrimeNumber sum = new SumOfTwinPrimeNumber(2);
+			new SumOfTwinPrimeNumber(2);
 		}catch(IllegalArgumentException e){
 			fail("Please enter the number more than 5");
 		}
@@ -28,7 +28,7 @@ public class SumOfTwinPrimeNumberTest {
 	@Test
 	public void zeroTest() {
 		try{
-			SumOfTwinPrimeNumber sum = new SumOfTwinPrimeNumber(0);
+			new SumOfTwinPrimeNumber(0);
 		}catch(IllegalArgumentException e){
 			fail("Please enter the number more than 5");
 		}
@@ -37,7 +37,7 @@ public class SumOfTwinPrimeNumberTest {
 	@Test
 	public void negativeNumberTest() {
 		try{
-			SumOfTwinPrimeNumber sum = new SumOfTwinPrimeNumber(-1);
+			new SumOfTwinPrimeNumber(-1);
 		}catch(IllegalArgumentException e){
 			fail("Please enter the number more than 5");
 		}

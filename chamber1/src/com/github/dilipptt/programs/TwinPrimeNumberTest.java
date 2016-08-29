@@ -7,7 +7,6 @@ import java.util.List;
 
 import org.junit.Test;
 
-import com.github.dilipptt.programs.SumOfTwinPrimeNumber;
 import com.github.dilipptt.programs.TwinPrimeNumber;
 
 public class TwinPrimeNumberTest {
@@ -23,7 +22,7 @@ public class TwinPrimeNumberTest {
 	@Test
 	public void lowerThanTwinPrimeRange() throws IllegalArgumentException {
 		try{
-			TwinPrimeNumber twinPrime = new TwinPrimeNumber(2);
+			new TwinPrimeNumber(2);
 		}catch(IllegalArgumentException e){
 			fail("Please enter the number more than 5");
 		}
@@ -32,7 +31,7 @@ public class TwinPrimeNumberTest {
 	@Test
 	public void zeroTest() throws IllegalArgumentException {
 		try{
-			TwinPrimeNumber twinPrime = new TwinPrimeNumber(0);
+			new TwinPrimeNumber(0);
 		}catch(IllegalArgumentException e){
 			fail("Please enter the number more than 5");
 		}
@@ -41,7 +40,7 @@ public class TwinPrimeNumberTest {
 	@Test
 	public void negativeNumberTest() throws IllegalArgumentException {
 		try{
-			TwinPrimeNumber twinPrime = new TwinPrimeNumber(-1);
+			new TwinPrimeNumber(-1);
 		}catch(IllegalArgumentException e){
 			fail("Please enter the number more than 5");
 		}

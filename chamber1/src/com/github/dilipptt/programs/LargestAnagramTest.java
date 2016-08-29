@@ -25,7 +25,7 @@ public class LargestAnagramTest {
 	@Test
 	public void nullTest() {
 		try{
-			LargestAnagram largestAnagram = new LargestAnagram("");
+			new LargestAnagram("");
 		}catch(NumberFormatException e){
 			fail("Number is Invalid");
 		}
@@ -34,7 +34,7 @@ public class LargestAnagramTest {
 	@Test
 	public void negativeNumberTest() {
 		try{
-			LargestAnagram largestAnagram = new LargestAnagram("-123");
+			new LargestAnagram("-123");
 		}catch(NumberFormatException e){
 			fail("Number is Invalid");
 		}

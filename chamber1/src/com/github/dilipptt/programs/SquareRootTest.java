@@ -4,7 +4,6 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import com.github.dilipptt.programs.CubeRoot;
 import com.github.dilipptt.programs.SquareRoot;
 
 public class SquareRootTest {
@@ -20,7 +19,7 @@ public class SquareRootTest {
 	// Boundary condition
 	public void sqrtTestforZero() {
 		try {
-			SquareRoot squareRoot = new SquareRoot(0);
+			new SquareRoot(0);
 		} catch (IllegalArgumentException e) {
 			fail("The number should be greater than zero");
 		}

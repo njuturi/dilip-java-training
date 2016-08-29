@@ -4,7 +4,6 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import com.github.dilipptt.programs.SumOfNaturalNumbers;
 import com.github.dilipptt.programs.SumOfSquaresOfNaturalNumbers;
 
 public class SumOfSquaresOfNaturalNumbersTest {
@@ -29,7 +28,7 @@ public class SumOfSquaresOfNaturalNumbersTest {
 	@Test
 	public void sumOfNegativeNumberTest() {
 		try {
-			SumOfSquaresOfNaturalNumbers sum = new SumOfSquaresOfNaturalNumbers(-3);
+			new SumOfSquaresOfNaturalNumbers(-3);
 		} catch (IllegalArgumentException e) {
 			fail("Number should be non negative");
 		}
@@ -38,7 +37,7 @@ public class SumOfSquaresOfNaturalNumbersTest {
 	@Test
 	public void zeroNumberTest() {
 		try {
-			SumOfSquaresOfNaturalNumbers sum = new SumOfSquaresOfNaturalNumbers(0);
+			new SumOfSquaresOfNaturalNumbers(0);
 		} catch (IllegalArgumentException e) {
 			fail("Number should be zero");
 		}

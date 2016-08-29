@@ -2,10 +2,6 @@ package com.github.dilipptt.programs;
 
 //Find a missing number in an array of with number of range 1 to n.
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-
 public class MissingNumber {
 
 	public int missingNumber(int[] list, int range) throws Exception {

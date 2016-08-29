@@ -18,9 +18,8 @@ public class MissingNumberTest {
 	@Test
 	public void singleNumeberTest() {
 		MissingNumber missingNum = new MissingNumber();
-		int actualMissingNumber;
 		try {
-			actualMissingNumber = missingNum.missingNumber(new int[] {0},1);
+			missingNum.missingNumber(new int[] {0},1);
 		} catch (Exception e) {
 			fail("Array is invalid");
 		}
@@ -29,9 +28,8 @@ public class MissingNumberTest {
 	@Test
 	public void nullArrayTest() {
 		MissingNumber missingNum = new MissingNumber();
-		int actualMissingNumber;
 		try {
-			actualMissingNumber = missingNum.missingNumber(new int[] {},1);
+			missingNum.missingNumber(new int[] {},1);
 		} catch (Exception e) {
 			fail("Array is invalid");
 		}

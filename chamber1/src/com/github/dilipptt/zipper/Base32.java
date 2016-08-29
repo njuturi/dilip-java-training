@@ -3,8 +3,6 @@ package com.github.dilipptt.zipper;
 
 import java.math.BigInteger;
 
-import org.omg.CORBA.portable.ValueOutputStream;
-
 public class Base32 {
 	public static final String BASE32 = "ABCDEFGHIJKLMNOPQRSTUVWXYZ234567";
 	StringBuilder encode = new StringBuilder("");

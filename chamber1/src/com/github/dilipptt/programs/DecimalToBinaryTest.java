@@ -22,7 +22,7 @@ public class DecimalToBinaryTest {
 	
 	@Test
 	public void negativeNumberTest() {
-		DecimalToBinary decimalToBinary = new DecimalToBinary(-7); 
+		new DecimalToBinary(-7); 
 		fail("not implement for negative number case");
 	}
 	

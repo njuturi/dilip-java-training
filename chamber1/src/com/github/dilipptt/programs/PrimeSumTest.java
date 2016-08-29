@@ -20,7 +20,7 @@ public class PrimeSumTest {
 	public void zeroLengthTest() {
 		try {
 			PrimeSum prime = new PrimeSum(0);
-			int actual = prime.getSum();
+			prime.getSum();
 		} catch (IllegalArgumentException e) {
 			fail("Invalid parameters");
 		}
@@ -30,7 +30,7 @@ public class PrimeSumTest {
 	public void negativeRangeTest() {
 		try {
 			PrimeSum prime = new PrimeSum(-1);
-			int actual = prime.getSum();
+			prime.getSum();
 		} catch (IllegalArgumentException e) {
 			fail("Invalid parameters");
 		}

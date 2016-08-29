@@ -35,7 +35,7 @@ public class TriangleTest {
 	@Test
 	public void negativeEdgesTest() {
 		try{
-			Triangle triangle = new Triangle(-1, -3, 3);
+			new Triangle(-1, -3, 3);
 		}catch(IllegalArgumentException e){
 			fail("The edges are invalid");
 		}
@@ -44,7 +44,7 @@ public class TriangleTest {
 	@Test
 	public void zeroEdgeLegthTest() {
 		try{
-			Triangle triangle = new Triangle(0, 1, 3);
+			new Triangle(0, 1, 3);
 		}catch(IllegalArgumentException e){
 			fail("The edges are invalid");
 		}

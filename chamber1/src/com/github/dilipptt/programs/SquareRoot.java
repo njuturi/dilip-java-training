@@ -27,6 +27,7 @@ public class SquareRoot {
 				if (i * i == number) {
 					break;
 				} else if (((i * i) < number) && ((i + 1) * (i + 1)) > number) {
+					@SuppressWarnings("unused")
 					float squareRoot = ((float) (number)) / i; // logic for
 																// handling
 																// numbers that

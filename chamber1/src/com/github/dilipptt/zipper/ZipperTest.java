@@ -103,6 +103,7 @@ public class ZipperTest {
 			System.out.println("Longitude = "
 					+ addrObj.getGeolocation().getLongitudeStringForm());
 		}
+		scan.close();
 	}
 
 	@Test

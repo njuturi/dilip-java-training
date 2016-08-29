@@ -4,7 +4,6 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import com.github.dilipptt.programs.LargestAnagram;
 import com.github.dilipptt.programs.SmallestAnagram;
 
 public class SmallestAnagramTest {
@@ -27,7 +26,7 @@ public class SmallestAnagramTest {
 	@Test
 	public void nullTest() {
 		try {
-			SmallestAnagram smallestAnagram = new SmallestAnagram("");
+			new SmallestAnagram("");
 		} catch (NumberFormatException e) {
 			fail("Number is Invalid");
 		}
@@ -36,7 +35,7 @@ public class SmallestAnagramTest {
 	@Test
 	public void negativeNumberTest() {
 		try {
-			SmallestAnagram smallestAnagram = new SmallestAnagram("-123");
+			new SmallestAnagram("-123");
 		} catch (NumberFormatException e) {
 			fail("Number is Invalid");
 		}

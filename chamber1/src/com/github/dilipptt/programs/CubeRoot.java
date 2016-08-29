@@ -3,7 +3,6 @@ package com.github.dilipptt.programs;
 //Find the cube root of a given number.
 
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class CubeRoot {
