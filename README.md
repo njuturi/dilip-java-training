@@ -5,7 +5,7 @@ This repository contains series of exercises to learn adavance Java.
 ## Chamber1
 This is the beginning of training. Chamber1 contains 34 program sets, Junit Test and a mini project. 
 - [List of programs](#programs)
-- [Junit Test](https://github.com/dilipptt/dilip-java-training/wiki/Junit-Test)
+- [Junit Test](#junit)
 - [Mini Project](#project)
 
 **You will learn following things from this chamber:**
@@ -57,3 +57,9 @@ Create a Zippr Code. Zippr Code is a 8 character alphanumeric code. Zippr allows
 * Check if given two lat longs are same.
 * Find “as the crow flies” distance between two zippr codes.
 * For a given zippr code, show the address from a given directory of zipper codes.
+
+<a name = "junit">
+###Junit
+
+Junit is testing framework to develop unit testing to test another piece of code. Please click this [link](https://github.com/dilipptt/dilip-java-training/wiki/Junit-Test) to take a detail look on junit.
+
