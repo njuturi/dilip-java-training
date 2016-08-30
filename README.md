@@ -5,7 +5,7 @@ This repository contains series of exercises to learn adavance Java.
 ## Chamber1
 This is the beginning of training. Chamber1 contains 34 program sets, Junit Test and a mini project. 
 - [List of programs](#programs)
-- [Junit Test](#junit)
+- [Junit Test](https://github.com/dilipptt/dilip-java-training/wiki/Junit-Test)
 - [Mini Project](#project)
 
 **You will learn following things from this chamber:**
