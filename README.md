@@ -62,4 +62,8 @@ Create a Zippr Code. Zippr Code is a 8 character alphanumeric code. Zippr allows
 ###Junit
 
 Junit is testing framework to develop unit testing to test another piece of code. Please click this [link](https://github.com/dilipptt/dilip-java-training/wiki/Junit-Test) to take a detail look on junit.
+### Main purpose of junit testing
+* Intention - Get the expected value in all the conditions.
+* Isolation - Every test should be independent from every other test.
+* Repeatability - Every test should be able to run over and over again and produce the same results.
 
