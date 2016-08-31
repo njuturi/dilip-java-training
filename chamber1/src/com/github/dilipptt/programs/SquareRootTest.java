@@ -12,11 +12,13 @@ public class SquareRootTest {
 	// Right
 	public void positiveTest() {
 		SquareRoot squareRoot = new SquareRoot(4);
-		assertEquals(2, squareRoot.printSquareRoot());
+		int expected = 2;
+		int actaul = squareRoot.getSquareRoot();
+		assertEquals(expected, actaul);
 	}
 
 	@Test
-	// Boundary condition
+	// edge condition
 	public void sqrtTestforZero() {
 		try {
 			new SquareRoot(0);
@@ -27,9 +29,9 @@ public class SquareRootTest {
 
 	// Inverse relationship
 	@Test
-	public void squareRootInverseTest() throws Exception {
+	public void squareRootInverseTest(){
 		SquareRoot squareRoot = new SquareRoot(4);
-		int x = squareRoot.printSquareRoot();
+		int x = squareRoot.getSquareRoot();
 		assertEquals(4, x * x);
 	}
 
@@ -38,7 +40,7 @@ public class SquareRootTest {
 	public void positiveTest2() {
 		SquareRoot squareRoot = new SquareRoot(64);
 		long x = (long) Math.sqrt(64);
-		long y = squareRoot.printSquareRoot();
+		long y = squareRoot.getSquareRoot();
 		assertEquals(x, y);
 	}
 
@@ -48,9 +50,9 @@ public class SquareRootTest {
 	public void exceptionTest() {
 		try {
 			SquareRoot squareRoot = new SquareRoot(-1);
-			squareRoot.printSquareRoot();
+			squareRoot.getSquareRoot();
 		} catch (IllegalArgumentException e) {
-			assertTrue(true);
+			fail("Please enter positive number");
 		}
 	}
 }
