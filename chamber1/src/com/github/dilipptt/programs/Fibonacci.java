@@ -40,9 +40,6 @@ public class Fibonacci {
 			// them is smaller than 0.00005
 			if (Math.abs(ratio2 - ratio1) <= threshold) {
 				System.out.println(temp1 + " " + temp2);
-				arrayList.add(temp1);
-				arrayList.add(temp2);
-				arrayList.add((int) Math.abs(ratio2 - ratio1));
 			}
 			temp3 = temp1 + temp2;
 			temp1 = temp2;
@@ -50,10 +47,6 @@ public class Fibonacci {
 			fibonacciList.add(temp3);
 		}
 		return fibonacciList;
-	}
-
-	public ArrayList<ArrayList<Double>> getGoldenSequence() {
-		return listOfGoldenNumberPairs;
 	}
 
 	public static void main(String[] args) {
