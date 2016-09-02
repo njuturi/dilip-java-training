@@ -1,9 +1,8 @@
 #36 Chamber of Javolin
 
-This repository contains series of exercises to learn adavance Java. 
-
-## [Chamber1](#chamber1)
-## [Chamber2](#chamber2)
+This repository contains series of exercises(chamber1) to learn adavance Java. 
+- [Chamber1](#chamber1)
+- [Chamber2](#chamber2)
 
 <a name = "chamber1"/>
 ##Chamber1
