@@ -2,12 +2,20 @@
 
 This repository contains series of exercises to learn adavance Java. 
 
-## Chamber1
+## [Chamber1](#chamber1)
 This is the beginning of training. Chamber1 contains 34 program sets, Junit Test and a mini project. 
 - [List of programs](#programs)
 - [Junit Test](#junit)
 - [Mini Project](#project)
 
+## Chamber2
+This is second chamber. It contains string metrics algorithms, inheritence and collections.
+- String Metrics
+- Inheritence
+- Collections
+
+<a name = "chamber1"/>
+##Chamber1
 **You will learn following things from this chamber:**
 * Data Types
 * Operators
