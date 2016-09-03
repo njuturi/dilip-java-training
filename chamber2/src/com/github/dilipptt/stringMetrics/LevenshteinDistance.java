@@ -1,3 +1,6 @@
+// Implementing levenshtein distance algorithm
+// https://en.wikibooks.org/wiki/Algorithm_Implementation/Strings/Levenshtein_distance#Java
+
 package com.github.dilipptt.stringMetrics;
 
 public class LevenshteinDistance {
