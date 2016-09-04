@@ -76,3 +76,9 @@ This is second chamber. It contains string metrics algorithms, inheritence and c
 - String Metrics
 - Inheritence
 - Collections
+
+String metrics : It is a metric that measures distance (similarity) between two text strings for approximate string matching or comparison.
+
+There are Various list of string metrics:
+- Levenshtein distance
+- Sørensen–Dice coefficient
