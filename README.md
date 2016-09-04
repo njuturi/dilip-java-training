@@ -80,5 +80,6 @@ This is second chamber. It contains string metrics algorithms, inheritence and c
 **String metrics** : It is a metric that measures distance (similarity) between two text strings for approximate string matching or comparison.
 
 There are Various list of string metrics:
-- Levenshtein distance
-- Sørensen–Dice coefficient
+- [Levenshtein distance](https://github.com/dilipptt/dilip-java-training/wiki/Levenshtein-distance)
+- [Sørensen–Dice coefficient](https://github.com/dilipptt/dilip-java-training/wiki/S%C3%B8rensen%E2%80%93Dice-coefficient)
+- [Jaccard Index](https://github.com/dilipptt/dilip-java-training/wiki/Jaccard-Index)
