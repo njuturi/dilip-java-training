@@ -84,3 +84,4 @@ There are Various list of string metrics:
 - [Sørensen–Dice coefficient](https://github.com/dilipptt/dilip-java-training/wiki/S%C3%B8rensen%E2%80%93Dice-coefficient)
 - [Jaccard Index](https://github.com/dilipptt/dilip-java-training/wiki/Jaccard-Index)
 - [Tversky index](https://github.com/dilipptt/dilip-java-training/wiki/Tversky-index)
+- [Overlap Coefficient](https://github.com/dilipptt/dilip-java-training/wiki/Overlap-coefficient)
