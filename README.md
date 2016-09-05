@@ -85,3 +85,4 @@ There are Various list of string metrics:
 - [Jaccard Index](https://github.com/dilipptt/dilip-java-training/wiki/Jaccard-Index)
 - [Tversky index](https://github.com/dilipptt/dilip-java-training/wiki/Tversky-index)
 - [Overlap Coefficient](https://github.com/dilipptt/dilip-java-training/wiki/Overlap-coefficient)
+- [TFIDF distance metric](https://github.com/dilipptt/dilip-java-training/wiki/TFIDF-distance-metric)
