@@ -1,3 +1,5 @@
+// https://github.com/dilipptt/dilip-java-training/wiki/Jaccard-Index
+
 package com.github.dilipptt.stringMetrics;
 
 import java.util.HashSet;

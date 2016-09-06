@@ -1,5 +1,7 @@
-package com.github.dilipptt.stringMetrics;
 // https://github.com/dilipptt/dilip-java-training/wiki/Overlap-coefficient
+
+package com.github.dilipptt.stringMetrics;
+
 import java.util.HashSet;
 import java.util.Set;
 
@@ -34,24 +36,22 @@ public class OverlapCoefficient {
 		Set<String> y = new HashSet<>();
 
 		for (int i = 0; i < string1.length() - 1; i++) {
-			String temp = "" + string1.charAt(i) + string1.charAt(i+1);
+			String temp = "" + string1.charAt(i) + string1.charAt(i + 1);
 			x.add(temp);
 		}
-		
-		for(int j =0;j<string2.length()-1;j++){
-			String temp = "" + string2.charAt(j) + string2.charAt(j+1);
+
+		for (int j = 0; j < string2.length() - 1; j++) {
+			String temp = "" + string2.charAt(j) + string2.charAt(j + 1);
 			y.add(temp);
 		}
-		
+
 		Set<String> intersection = new HashSet<>(x);
 		intersection.retainAll(y);
 		double commonBigrams = intersection.size();
-		
-		
-		
-		try{
+
+		try {
 			coefficient = commonBigrams / (Math.min(x.size(), y.size()));
-		}catch(ArithmeticException e){
+		} catch (ArithmeticException e) {
 			throw new ArithmeticException("Divided by zero");
 		}
 
