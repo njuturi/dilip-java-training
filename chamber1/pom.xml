@@ -3,11 +3,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.github.dilipptt</groupId>
-  <artifactId>chamber2</artifactId>
+  <artifactId>chamber1</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>chamber2</name>
+  <name>chamber1</name>
   <url>http://maven.apache.org</url>
 
   <properties>

@@ -4,11 +4,14 @@ package com.github.dilipptt.stringMetrics;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.logging.Logger;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class TFIDFCalculator {
-	private final static Logger LOGGER = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME); 
+	private static Logger logger = LoggerFactory.getLogger(TFIDFCalculator.class);
 	public double tf(List<String> stringList1, String term) {
+		logger.info("Hello World");
 		double result = 0;
 		for (String string : stringList1) {
 			if (term.equalsIgnoreCase(string)) {
@@ -48,6 +51,5 @@ public class TFIDFCalculator {
 		TFIDFCalculator calculator = new TFIDFCalculator();
 		double tfidf = calculator.tfidf(stringList1, documents, "ipsum");
 //		System.out.println("tfidf = " + tfidf);
-		LOGGER.info("tfidf = " + tfidf);
 	}
 }
