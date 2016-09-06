@@ -4,6 +4,8 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+import com.github.dilipptt.stringMetrics.LevenshteinDistance;
+
 public class LevenshteinDistanceTest {
 
 	@Test

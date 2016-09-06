@@ -4,8 +4,10 @@ package com.github.dilipptt.stringMetrics;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.logging.Logger;
 
 public class TFIDFCalculator {
+	private final static Logger LOGGER = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME); 
 	public double tf(List<String> stringList1, String term) {
 		double result = 0;
 		for (String string : stringList1) {
@@ -45,6 +47,7 @@ public class TFIDFCalculator {
 				stringList3);
 		TFIDFCalculator calculator = new TFIDFCalculator();
 		double tfidf = calculator.tfidf(stringList1, documents, "ipsum");
-		System.out.println("tfidf = " + tfidf);
+//		System.out.println("tfidf = " + tfidf);
+		LOGGER.info("tfidf = " + tfidf);
 	}
 }

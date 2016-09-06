@@ -3,7 +3,7 @@ package com.github.dilipptt.stringMetrics;
 import java.util.HashSet;
 import java.util.Set;
 
-public class JaccardCofficient {
+class JaccardCofficient {
 	private String string1, string2;
 
 	public JaccardCofficient(String string1, String string2) {
@@ -29,8 +29,8 @@ public class JaccardCofficient {
 
 	public double getJaccardCofficient() {
 		double coefficient = 0.0;
-		Set<String> x = new HashSet<>();
-		Set<String> y = new HashSet<>();
+		Set<String> x = new HashSet<String>();
+		Set<String> y = new HashSet<String>();
 
 		for (int i = 0; i < string1.length() - 1; i++) {
 			String temp = "" + string1.charAt(i) + string1.charAt(i + 1);
@@ -42,11 +42,11 @@ public class JaccardCofficient {
 			y.add(temp);
 		}
 
-		Set<String> intersection = new HashSet<>(x);
+		Set<String> intersection = new HashSet<String>(x);
 		intersection.retainAll(y);
 		double commonBigrams = intersection.size();
 
-		Set<String> union = new HashSet<>(x);
+		Set<String> union = new HashSet<String>(x);
 		union.addAll(y);
 		double unionLength = union.size();
 
